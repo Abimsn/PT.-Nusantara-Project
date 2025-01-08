@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-BE.css">
+</head>
+<body>
+    <div class="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit" id="login-button">Login</button>
+        </form>
+    </div>
+
+    <div class="data-section" style="display: none;">
+        <h2>Data</h2>
+        <form id="filter-form">
+            <label for="tanggal-awal">Tanggal Awal:</label>
+            <input type="date" id="tanggal-awal" required>
+            
+            <label for="tanggal-akhir">Tanggal Akhir:</label>
+            <input type="date" id="tanggal-akhir" required>
+
+            <button onclick="tampilkanData()">Tampilkan Data</button>
+        </form>
+
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Pelanggan</th>
+                    <th>Nama Barang</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
+                    <th>Alamat</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="data-tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="edit-form" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; z-index: 1000;">
+    </div>
+
+    <script src="script-BE.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    margin-top: 0.8%;
+    font-size: 1.5rem;
+}
+
+.nav-container {
+    background-color: #f5f5f5; 
+    padding: 10px;
+    padding-top: 30px;
+    margin-top: 2%;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 50px);
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.nav-buttons {
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.nav-buttons button:hover {
+    background-color: #b71c1c;
+}
+
+.nav-buttons button.active {
+    background-color: #757575;
+}
+
+
+.toggle-nav-button {
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease-in-out, background-color 0.3s;
+    width: 8%;
+}
+
+.toggle-nav-button:hover {
+    background-color: #b71c1c;
+}
+
+.nav-container.hidden + .toggle-nav-button {
+    width: 48px;
+}
+
+.nav-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-container.hidden {
+    transform: translateX(-100%);
+}
+
+
+.main-content {
+    margin-top: 50px;
+    margin-left: 220px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #d32f2f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+.output {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+.print-note {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+}
+
+.Print-popup {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.popup-konfirmasi {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+}
+
+.isi-popup-konfirmasi {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 0px 0px 8px 8px;
+}
+
+@media print {
+    #print-invoice, #print-delivery-note {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 1100;
+    }
+
+    #print-invoice > div, #print-delivery-note > div {
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+}

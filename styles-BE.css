@@ -1,0 +1,209 @@
+.login-section {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2 {
+    text-align: center;
+}
+
+.login-section form {
+    margin-top: 20px;
+}
+
+.login-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #0056b3;
+}
+
+.data-section {
+    width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-section h2 {
+    text-align: center;
+}
+
+.data-section form {
+    margin-top: 20px;
+}
+
+.data-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.data-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.data-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.data-section button:hover {
+    background-color: #0056b3;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#data-table {
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ccc;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .action-buttons button {
+        margin-left: 5px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .action-buttons button:hover {
+        background-color: #0056b3;
+    }
+}
+
+#edit-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#edit-form h2 {
+    margin-top: 0;
+}
+
+#edit-form form {
+    margin-top: 20px;
+}
+
+#edit-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#edit-form input, #edit-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#edit-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#edit-form button:hover {
+    background-color: #0056b3;
+}
+
+.tooltip-bubble {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-bubble .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-bubble .tooltiptext.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    display: inline-block;
+}
